@@ -3,8 +3,8 @@ import WhatDrivesUs from './WhatDrivesUs'
 
 export default function AboutSection() {
     return (
-        <div className='w-full '>
-            <div className='container-section py-8 md:py-56 w-[90%] md:w-[80%] z-10 mx-auto'>
+        <div className='w-full flex items-center '>
+            <div className='container-section py-8 md:py-72 w-[90%] md:w-[80%] z-10 mx-auto'>
 
 
                 <h1
@@ -22,7 +22,6 @@ export default function AboutSection() {
 
 
             </div >
-            <WhatDrivesUs />
 
 
         </div>

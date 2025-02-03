@@ -32,7 +32,7 @@ export default function WhatDrivesUs() {
         }
     ]
     return (
-        <div className='bg-gray-200'>
+        <div className='bg-gray-200 '>
             <div className='w-[90%] md:w-[80%] z-10 mx-auto text-white h- py-20'>
 
                 <div className='text-center md:text-left mb-8'> {/* Added container for heading and subtext */}

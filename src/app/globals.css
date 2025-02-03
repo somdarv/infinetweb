@@ -14,6 +14,40 @@
   @apply flex items-start justify-between flex-wrap;
 }
 
+.whitebg {
+  background-image: url('/images/whitebg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  /* Add this */
+  height: 100%;
+  /* Add this */
+}
+
+.whitebg::before {
+  content: '';
+  position: fixed;
+  /* Change from absolute to fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+/* Make sure content stays above the overlay */
+.whitebg>* {
+  position: relative;
+  z-index: 2;
+}
+
 .bg-about {
   background-image: url('/images/abt.webp');
   background-size: cover;
@@ -32,6 +66,7 @@
   /* Full width */
   /* For positioning overlays if needed */
 }
+
 
 /* If you need a dark overlay */
 
