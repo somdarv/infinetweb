@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-component {
+  @apply flex my-8 items-center justify-center w-full;
+}
+
+.container-section {
+  @apply flex items-center justify-between flex-wrap;
+}
+
+.container-section-start {
+  @apply flex items-start justify-between flex-wrap;
+}
+
+.bg-about {
+  background-image: url('/images/abt.webp');
+  background-size: cover;
+  /* Makes image cover entire container */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents image from repeating */
+  background-attachment: fixed;
+  /* Optional: Creates parallax effect */
+
+  /* Optional but often useful */
+  min-height: 100vh;
+  /* Full viewport height */
+  width: 100%;
+  /* Full width */
+  /* For positioning overlays if needed */
+}
+
+/* If you need a dark overlay */
+
+
+/* For content on top of background */
