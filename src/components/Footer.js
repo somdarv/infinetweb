@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import ButtonSecondary from './ButtonSecondary';
+import { Facebook, Instagram, Linkedin, TicketIcon, Twitter, X } from 'lucide-react';
+import JoinEmailForm from './JoinEmailForm';
 
 
 
@@ -28,18 +30,59 @@ export default function Footer({ page }) {
 
 
     return (
-        <div className='w-full bg-primary py-20'>
+        <div className='w-full bg-primary py-8'>
 
             {/* Top */}
             <div className='w-[90%] bo gap-y-8 py-8 flex container-section md:w-[80%] mx-auto'>
 
-                < h1 className='text-white font-bold text-4xl md:text-[46px] leading-none' >
-                    Download The < br /> Freedom App
-                </h1 >
+                <div>
+                    < h1 className='text-white font-bold text-3xl md:text-[36px] leading-none' >
+                        Download The < br /> Freedom App
+                    </h1 >
 
-                <div className='flex gap-x-4'>
-                    <ButtonSecondary label={'Android Application'} />
-                    <ButtonSecondary label={'iOS Application'} />
+                    <div className='w- my-6 flex items-center gap-x-2'>
+                        <button>
+                            <Image
+
+                                src={'/images/apple.svg'}
+                                width={100}
+                                height={100}
+                            />
+                        </button>
+                        <button>
+                            <Image
+
+                                src={'/images/android.svg'}
+                                width={100}
+                                height={100}
+                            />
+                        </button>
+                    </div>
+                </div>
+
+                <div className='flex w-[60%]  gap-x-4'>
+                    <div>
+
+
+                        {/* <div className='flex items-center text-white text-xl gap-x-2 my-8 justify-end'>
+                            <Facebook className='cursor-pointer' />
+                            <Instagram className='cursor-pointer' />
+                            <Linkedin className='cursor-pointer' />
+                            <Twitter className='cursor-pointer' />
+                        </div> */}
+                    </div>
+
+
+                    <div className='flex w-full justify-end'>
+                        <div className='w-full flex flex-col items-end justify-end'>
+                            <h1 className='text-xl my-2 text-end text-[#D66BA0]'>Be Part of What's Next</h1>
+                            <p className='text-white text-end w-full  md:w-[80%] 2xl:w-[65%] text-sm my-2'>Subscribe to get exclusive insights, early access to new features, and special offers delivered straight to your inbox. Join thousands of forward-thinking professionals already on board.</p>
+                            <div className='w-[60%] flex justify-end '>
+                                <JoinEmailForm className='my-4 flex justify-end ' />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div >
 
@@ -54,14 +97,14 @@ export default function Footer({ page }) {
                             height={200}
                         />
                     </button>
-                    <p className='text-sm w-full md:w-[40%] my-2'>
+                    <p className='text-sm w-full md:w-[45%] my-2'>
                         Infinet brings together seamless payments and instant access in one sleek package. Think of us as your digital key to the city.
                     </p>
                 </div>
 
                 {/* right side */}
                 <div className='flex items-start gap-x-20'>
-                    <div>
+                    <div className='text-sm'>
                         <p className='text-accent font-semibold mb-4'>Support</p>
                         <div className='flex flex-col items-start'>
                             <button className='my-2'>
@@ -74,8 +117,8 @@ export default function Footer({ page }) {
                     </div>
 
 
-                    <div>
-                        <p className='text-accent font-semibold mb-4'>Company</p>
+                    <div className='text-sm'>
+                        <p className='text-accent font-semibold mb-4'>Browse</p>
                         <div className='flex flex-col items-start'>
                             <button className='my-2'>
                                 How It Works                            </button>
@@ -89,7 +132,7 @@ export default function Footer({ page }) {
                     </div>
 
 
-                    <div>
+                    <div className='text-sm'>
                         <p className='text-accent font-semibold mb-4'>Legal</p>
                         <div className='flex flex-col items-start'>
                             <button className='my-2'>

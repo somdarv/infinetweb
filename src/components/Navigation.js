@@ -19,8 +19,8 @@ export default function Navigation({ page }) {
         { id: 1, label: 'Home', path: '/' },
         { id: 2, label: 'About', path: '/about' },
         { id: 3, label: 'Product', path: '/product' },
-        { id: 4, label: 'Contact', path: '/' },
-        { id: 5, label: 'Blog', path: '/' },
+        { id: 4, label: 'Blog', path: '/blog' },
+        { id: 5, label: 'Contact', path: '/' },
     ]
 
     const [activeItem, setActiveItem] = useState(page);

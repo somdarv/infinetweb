@@ -14,6 +14,77 @@
   @apply flex items-start justify-between flex-wrap;
 }
 
+
+@font-face {
+  font-family: 'Hogira';
+  src: url('/fonts/Hogira-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Hogira';
+  src: url('/fonts/Hogira-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'HogiraBold';
+  src: url('/fonts/Hogira-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Hogira';
+  src: url('/fonts/Hogira-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Monument';
+  src: url('/fonts/MonumentExtended-Regular') format('opentype');
+  font-weight: 400;
+}
+
+/* globals.css */
+
+@font-face {
+  font-family: 'MonumentExtended';
+  src: url('/fonts/MonumentExtended-Regular.otf') format('opentype');
+  font-weight: 800;
+  /* UltraBold font weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonumentExtendedBold';
+  src: url('/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+  font-weight: 800;
+  /* UltraBold font weight */
+  font-style: normal;
+}
+
+.monument-regular {
+  font-family: 'MonumentExtended', sans-serif;
+  font-weight: 200;
+  /* UltraBold font */
+}
+
+.monument-bold {
+  font-family: 'MonumentExtendedBold', sans-serif;
+  font-weight: 800;
+  /* UltraBold font */
+}
+
+.hogira-bold {
+  font-family: 'HogiraBold', sans-serif;
+  font-weight: 800;
+  /* UltraBold font */
+}
+
+h1 {
+  font-family: 'monumentBold', sans-serif;
+}
+
 .whitebg {
   background-image: url('/images/whitebg.webp');
   background-size: cover;
