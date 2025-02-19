@@ -9,7 +9,12 @@ module.exports = {
         'primary-dark': '#2D0242',
         'accent': '#D66BA0',
         // 'accent': '#A711EE',
-      }
+      },
+      fontFamily: {
+        aloevera: ['var(--font-aloevera)'],
+        erstoria: ['var(--font-erstoria)'],
+        hogira: ['var(--font-hogira)'],
+      },
     },
   },
   plugins: [],
