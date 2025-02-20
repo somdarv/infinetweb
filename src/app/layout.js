@@ -44,6 +44,23 @@ const aloevera = localFont({
   variable: "--font-aloevera",
 });
 
+const erstoria = localFont({
+  src: [{
+    path: './fonts/Erstoria.otf',
+    weight: '600',
+  },],
+  variable: "--font-erstoria",
+
+})
+const hogira = localFont({
+  src: [{
+    path: './fonts/Hogira-Bold.otf',
+    weight: '600',
+  },],
+  variable: "--font-hogira",
+
+})
+
 
 
 export const metadata = {
@@ -55,6 +72,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+<<<<<<< HEAD
       <html lang="en">
         <head>
            {/* Google Tag Manager */}
@@ -83,5 +101,14 @@ export default function RootLayout({ children }) {
             {children}
         </body>
       </html>
+=======
+    <html lang="en">
+      <body
+        className={`${aloevera.variable} ${erstoria.variable} ${hogira.variable} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
+>>>>>>> 88e1703e663740d7afbd378fd629260586e71c39
   );
 }
