@@ -13,7 +13,7 @@ export default function page() {
                 <Navigation page={'Product'} className='' />
             </div>
 
-            <ProductDemo />
+            {/* <ProductDemo /> */}
 
             <ProductSummary />
 

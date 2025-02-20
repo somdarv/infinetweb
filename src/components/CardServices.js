@@ -26,7 +26,9 @@ export default function CardServices() {
         { src: '/images/companylogos/spotify.png', alt: "spotify" },
         { src: '/images/companylogos/amazon.png', alt: "amazon" },
         { src: '/images/companylogos/apple.png', alt: "apple" },
+        { src: '/images/companylogos/fashionova.png', alt: "fashionova" },
         { src: '/images/companylogos/google.png', alt: "google" },
+        { src: '/images/companylogos/shein.png', alt: "shein" },
         { src: '/images/companylogos/microsoft.png', alt: "microsoft" },
         { src: '/images/companylogos/steam.png', alt: "steam" },
         { src: '/images/companylogos/adobe.png', alt: "adobe" },
@@ -37,13 +39,13 @@ export default function CardServices() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="mt-16 w-full overflow-hidden bg-whit backdrop-blur-sm py-6 rounded-xl"
+            className="mt-16 w-full overflow-hidden bg-whit backdrop-blur-sm py-8 rounded-xl"
         >
             <div className="mb-3 text-center">
-                <span className="text-white/70 text-sm">Works with your favorite services</span>
+                <span className="text-white my-4 text-lg">Works with your favorite services</span>
             </div>
 
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex my-2 justify-center items-center">
                 {/* First row of logos */}
                 <div
                     className="flex gap-12 items-center animate-scroll px-8"
@@ -63,7 +65,7 @@ export default function CardServices() {
                                 height={100}
                                 src={company.src}
                                 alt={company.alt}
-                                className="w-full h-auto opacity-70 hover:opacity-100 transition-opacity"
+                                className="w-full h-auto  hover:opacity-100 transition-opacity"
                             />
                         </div>
                     ))}
@@ -83,8 +85,8 @@ export default function CardServices() {
                     {companies.map((company, index) => (
                         <div key={`second-${index}`} className="flex items-center justify-center w-[100px]">
                             <Image
-                                width={70}
-                                height={70}
+                                width={100}
+                                height={100}
                                 src={company.src}
                                 alt={company.alt}
                                 className="w-full h-auto  hover:opacity-100 transition-opacity"
@@ -92,6 +94,7 @@ export default function CardServices() {
                         </div>
                     ))}
                 </div>
+
             </div>
         </motion.div>
     )

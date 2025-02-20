@@ -12,7 +12,6 @@ import Hero2 from '@/components/Hero2'
 
 
 
-
 export default function Page() {
   const [heroType, setHeroType] = useState(2)
   const [isAnimating, setIsAnimating] = useState(false);
@@ -52,12 +51,23 @@ export default function Page() {
         );
         setIsAnimating(false);
       }, 500); // Match this with your animation duration
-    }, 500000); // Change hero every 5 seconds
+    }, 10000); // Change hero every 5 seconds
 
     return () => clearInterval(timer);
   }, []);
 
   const currentConfig = heroConfigs[heroType];
+
+  const renderHero = () => {
+    switch (heroType) {
+      case 1:
+        return <Hero />;
+      case 2:
+        return <Hero2 />;
+      default:
+        return <Hero />;
+    }
+  };
 
 
   return (
@@ -99,8 +109,18 @@ export default function Page() {
         {/* <div className='w-[80%] bg-primary-dark mx-auto'>
         <Hero2 />
       </div> */}
-        <div className='w-[80%] min-h-screen bg-primary-da mx-auto'>
-          <Hero2 />
+        <div className='w-[80%] min-h-screen mx-auto'>
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={heroType}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              {renderHero()}
+            </motion.div>
+          </AnimatePresence>
         </div>
 
 

@@ -18,7 +18,7 @@ export default function Hero2() {
     );
     return (
         <div className='w-full bg-red- min-h-screen'>
-            <div className='w-full   flex flex-wrap items-center justify-between py-20'>
+            <div className='w-full   flex flex-wrap items-center justify-between pt-20'>
                 <div className='w-full md:w-[50%] relative'>
                     {/* <motion.div
                     className="absolute left-0 top-0 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
@@ -32,7 +32,7 @@ export default function Hero2() {
                         src={'/images/vccards.png'}
                         width={1080}
                         height={1080}
-                        className='w-[80%] mx-auto'
+                        className='w-full md:w-[80%] mx-auto'
                         alt='Infinet-Virtual-Cards' />
 
                 </div>
@@ -40,9 +40,9 @@ export default function Hero2() {
 
 
                 <div className='w-full md:w-[50%] '>
-                    <h1 className="font-hogira text-white text-3xl mb-2">Infinet</h1>
-                    <h1 className="font-erstoria text-white text-7xl">Virtual Cards</h1>
-                    <p className='text-white w-[70%] text-lg my-8'>Your digital world deserves better cards. Shop, stream, and subscribe instantly with virtual cards that work everywhere. No hassle, just freedom.</p>
+                    <h1 className="font-hogira w-full text-white text-3xl mb-2">Infinet</h1>
+                    <h1 className="font-erstoria w-full text-white text-5xl md:text-7xl">Virtual Cards</h1>
+                    <p className='text-white w-full md:w-[70%] text-lg my-4 md:my-8'>Your digital world deserves better cards. Shop, stream, and subscribe instantly with virtual cards that work everywhere. No hassle, just freedom.</p>
 
 
                     <div className="flex flex-wrap gap-3 mb-8">
@@ -77,7 +77,7 @@ export default function Hero2() {
 
             </div>
 
-            <div className='w-full'>
+            <div className='w-full '>
                 <CardServices />
             </div>
         </div>
