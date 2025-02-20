@@ -43,7 +43,7 @@ export default function Footer({ page }) {
                     <div className='w- my-6 flex items-center gap-x-2'>
                         <button>
                             <Image
-
+                                alt='apple'
                                 src={'/images/apple.svg'}
                                 width={100}
                                 height={100}
@@ -51,7 +51,7 @@ export default function Footer({ page }) {
                         </button>
                         <button>
                             <Image
-
+                                alt='android'
                                 src={'/images/android.svg'}
                                 width={100}
                                 height={100}
@@ -75,7 +75,7 @@ export default function Footer({ page }) {
 
                     <div className='flex w-full justify-end'>
                         <div className='w-full flex flex-col items-end justify-end'>
-                            <h1 className='text-xl my-2 text-end text-[#D66BA0]'>Be Part of What's Next</h1>
+                            <h1 className='text-xl my-2 text-end text-[#D66BA0]'>Be Part of What&apos;s Next</h1>
                             <p className='text-white text-end w-full  md:w-[80%] 2xl:w-[65%] text-sm my-2'>Subscribe to get exclusive insights, early access to new features, and special offers delivered straight to your inbox. Join thousands of forward-thinking professionals already on board.</p>
                             <div className='w-[60%] flex justify-end '>
                                 <JoinEmailForm className='my-4 flex justify-end ' />

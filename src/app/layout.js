@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
 
 const aloevera = localFont({
   src: [
@@ -48,16 +49,39 @@ const aloevera = localFont({
 export const metadata = {
   title: "Infinet Wallet",
   description: "Pay Instant, Pay Cool!",
+  author: "Infinet Wallet",
+  keywords: "payments, instant pay, cool payments, Infinet Wallet"
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${aloevera.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+      <html lang="en">
+        <head>
+           {/* Google Tag Manager */}
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=G-K2FNJLME4Y`}
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-K2FNJLME4Y', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+        </head>
+        <body
+          className={`${aloevera.variable} antialiased`}
+        >
+            {children}
+        </body>
+      </html>
   );
 }

@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import ButtonSecondary from './ButtonSecondary';
+import ButtonPrimary from './ButtonPrimary';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faHamburger } from '@fortawesome/free-solid-svg-icons';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -17,8 +18,8 @@ export default function Navigation({ page }) {
 
     const menuItems = [
         { id: 1, label: 'Home', path: '/' },
-        { id: 2, label: 'About', path: '/about' },
-        { id: 3, label: 'Product', path: '/product' },
+        { id: 2, label: 'About', path: '/' },
+        { id: 3, label: 'Product', path: '/' },
         { id: 4, label: 'Blog', path: '/blog' },
         { id: 5, label: 'Contact', path: '/' },
     ]

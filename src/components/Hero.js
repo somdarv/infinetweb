@@ -6,6 +6,7 @@ import ButtonPrimary from './ButtonPrimary'
 import SocialProof from './SocialProof'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Router, useRouter } from 'next/navigation';
 
 
 
@@ -13,6 +14,8 @@ export default function Hero() {
     const HeroGroups = [
         {}
     ]
+
+    const router = useRouter();
     return (
         <div className='container-component py-20 '>
             <div className='container-section '>
@@ -44,11 +47,12 @@ export default function Hero() {
                             Skip The Queue, <br /> Just Tap Through
                         </motion.h1>
                         <p className='text-white text-sm text-center md:text-left my-4'>
-                            {"No more tickets, no more waiting. Just effortless entry to the club or the show! One tap gets you through the door while others wait in line. Whether it's an exclusive club night or sold-out concert, you're always on the VIP list."}
+                            {/* {"No more tickets, no more waiting. Just effortless entry to the club or the show! One tap gets you through the door while others wait in line. Whether it's an exclusive club night or sold-out concert, you're always on the VIP list."} */}
+                            {"No lines, no waiting, no delays—just a seamless way through, every single time. Move effortlessly, skip the hold-ups, and step into a world where everything flows. One simple tap, and you're exactly where you need to be, without the unnecessary stops."}
                         </p>
 
                         <div className='flex mt-8 items-center justify-center md:justify-start gap-x-4'>
-                            <ButtonPrimary label={'Get Your Card'} />
+                            <ButtonPrimary label={'Get Your Card'} onClick={() => router.push('https://infinetwallet.com/access/customer/')} />
                             <ButtonSecondary label={'Partner With Us'} />
                         </div>
 

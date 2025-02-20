@@ -7,8 +7,8 @@ export default function PageNav({
     nextPage = null,
     prevTitle = '',
     nextTitle = '',
-    prevSubtitle = '',  // Optional 
-    nextSubtitle = ''   // Optional 
+    prevSubtitle = '',  // Optional
+    nextSubtitle = ''   // Optional
 }) {
     return (
         <div className="w-full border-t border-gray-200 mt-12">
@@ -39,9 +39,7 @@ export default function PageNav({
                                     <p className="font-medium">{prevTitle}</p>
                                 </div>
                             </Link>
-                        ) : (
-                            <div />
-                        )}
+                        ) : null}
                     </div>
 
                     {/* Next Page */}

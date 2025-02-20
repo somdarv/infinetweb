@@ -138,7 +138,35 @@ h1 {
   /* For positioning overlays if needed */
 }
 
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
 
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+}
 /* If you need a dark overlay */
 
 

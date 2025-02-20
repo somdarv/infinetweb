@@ -53,6 +53,7 @@ export default function ProductFeatures() {
                             <Image
                                 src={feature.image}
                                 width={230}
+                                alt={feature.title}
                                 height={230}
                                 className='w-8 my-16 group-hover:ml-4 ease-in-out duration-300 transition-all'
                             />

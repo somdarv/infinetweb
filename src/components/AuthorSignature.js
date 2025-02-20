@@ -3,11 +3,11 @@ import React from 'react'
 import Image from 'next/image'
 
 const AuthorSignature = ({
-    name = "Pagwuni Radia",
+    name = "",
     role = "Technical Writer",
     image = "/images/blogimg2.png",
     bio = "Passionate about technology and innovation",
-    date = "Feb 9, 2024"
+    date = ""
 }) => {
     return (
         <div className="w-full border-t border-gray-200 mt-12 pt-8">
@@ -32,7 +32,7 @@ const AuthorSignature = ({
                         <span className="text-sm text-gray-500">{date}</span>
                     </div>
 
-                    <p className="mt-2 text-gray-600">{bio}</p>
+                    {/* <p className="mt-2 text-gray-600">{bio}</p> */}
 
                     <div className="mt-4 flex gap-4">
                         <a href="#" className="text-gray-500 hover:text-accent transition-colors">

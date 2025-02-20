@@ -18,11 +18,12 @@ export default function ProductSummary() {
                 <div className='w-full md:w-[50%]'>
                     <h1 className='font-bold text-2xl text-primary'>Infinet Wallet</h1>
                     <p className='mt-2 font-semibold text-sm'>
-                        Forget everything you know about mobile money. No more USSD codes. No more waiting for change. No more payment headaches. Just walk in, tap, and go. It's payment at the speed of life. Simple, fast, and always ready when you are.
+                        Forget everything you know about mobile money. No more USSD codes. No more waiting for change. No more payment headaches. Just walk in, tap, and go. It&apos;s payment at the speed of life. Simple, fast, and always ready when you are.
                     </p>
 
                     <div className='my-4'>
                         <Image
+                            alt='appstore'
                             src={'/images/appstores.svg'}
                             height={200}
                             width={200}
