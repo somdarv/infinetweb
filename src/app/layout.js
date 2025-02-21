@@ -70,11 +70,21 @@ export const metadata = {
   keywords: "payments, instant pay, cool payments, Infinet Wallet"
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, metaImage, metaDescription }) {
+    // Default meta data
+    //const defaultMetaImage = "/images/default-cover.jpg"; // Path to your default image
+    const defaultMetaDescription = "Welcome to Infinet Wallet - Pay Instant, Pay Cool!";
+
+
   return (
-<<<<<<< HEAD
       <html lang="en">
         <head>
+          {/* Dynamic Meta Tags */}
+          <meta property="og:image" content={metaImage} />
+          <meta property="og:description" content={metaDescription || defaultMetaDescription} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content={metaImage} />
+          <meta name="twitter:description" content={metaDescription || defaultMetaDescription} />
            {/* Google Tag Manager */}
             <Script
               strategy="afterInteractive"
@@ -101,14 +111,5 @@ export default function RootLayout({ children }) {
             {children}
         </body>
       </html>
-=======
-    <html lang="en">
-      <body
-        className={`${aloevera.variable} ${erstoria.variable} ${hogira.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
->>>>>>> 88e1703e663740d7afbd378fd629260586e71c39
   );
 }

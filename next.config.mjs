@@ -4,7 +4,7 @@ const nextConfig = {
     images: {
         domains: ['firebasestorage.googleapis.com'],
     },
-    output: 'export'
+    // output: 'export'
 };
 
 export default nextConfig;

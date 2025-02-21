@@ -5,12 +5,15 @@ import ButtonSecondary from './ButtonSecondary'
 import { Clock, CreditCard, Globe, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import CardServices from './CardServices'
-
+import { Router, useRouter } from 'next/navigation';
 
 
 
 
 export default function Hero2() {
+
+    const router = useRouter();
+
     const FeatureTag = ({ children }) => (
         <div className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-white/90 flex items-center gap-2">
             {children}
@@ -62,7 +65,7 @@ export default function Hero2() {
 
 
                     <div className='flex items-center gap-x-3'>
-                        <ButtonPrimary label={'Get A Card'} />
+                        <ButtonPrimary label={'Get A Card'} onClick={() => router.push('https://infinetwallet.com/access/customer/')}/>
                         <ButtonSecondary label={'Learn More'} />
                     </div>
 

@@ -12,7 +12,15 @@ import { getBlogs } from '@/stores/actions/blogAction';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 
-export default function page() {
+export default function Page() {
+
+      const router = useRouter();
+
+    const [isClient, setIsClient] = useState(false);
+    const [blogData, setBlogsData] = useState([])
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const [isAnimating, setIsAnimating] = useState(false)
+    const [animationClass, setAnimationClass] = useState('fade-in')
 
     const blogs = BlogData;
 

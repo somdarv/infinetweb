@@ -30,7 +30,8 @@ export default function DynamicBlogData({ slug }) {
     }, [slug]);
 
     if (!post) {
-        return <div className="text-center text-red-500">Post Not Found</div>;
+        // return <div className="text-center text-red-500">Post Not Found</div>;
+        return <div className="text-center text-red-500"></div>;
     }
 
     return (
