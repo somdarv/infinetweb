@@ -66,6 +66,7 @@ export default function CardServices() {
                                 src={company.src}
                                 alt={company.alt}
                                 className="w-full h-auto  hover:opacity-100 transition-opacity"
+                                unoptimized
                             />
                         </div>
                     ))}
@@ -90,6 +91,7 @@ export default function CardServices() {
                                 src={company.src}
                                 alt={company.alt}
                                 className="w-full h-auto  hover:opacity-100 transition-opacity"
+                                unoptimized
                             />
                         </div>
                     ))}

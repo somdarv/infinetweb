@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import ButtonPrimary from './ButtonPrimary'
@@ -21,7 +23,7 @@ export default function Hero2() {
     );
     return (
         <div className='w-full bg-red- min-h-screen'>
-            <div className='w-full   flex flex-wrap items-center justify-between pt-20'>
+            <div className='w-full flex flex-wrap items-center justify-between pt-20'>
                 <div className='w-full md:w-[50%] relative'>
                     {/* <motion.div
                     className="absolute left-0 top-0 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
@@ -32,11 +34,13 @@ export default function Hero2() {
                     <span className="text-sm text-white">Setup in 2 minutes</span>
                 </motion.div> */}
                     <Image
-                        src={'/images/vccards.png'}
+                        src={'/images/cards.webp'}
                         width={1080}
                         height={1080}
                         className='w-full md:w-[80%] mx-auto'
-                        alt='Infinet-Virtual-Cards' />
+                        alt='Infinet-Virtual-Cards'
+                        unoptimized
+                    />
 
                 </div>
 
