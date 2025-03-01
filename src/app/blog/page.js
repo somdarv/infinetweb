@@ -118,6 +118,7 @@ export default function Page() {
                             >
 
                                 <Image
+                                    unoptimized
                                     src={featuredBlogs[currentSlide]?.cover_art || '/images/BlogHeader.jpg'}
                                     width={200}
                                     height={200}
@@ -141,6 +142,7 @@ export default function Page() {
                                         <div>
                                             <div className='w-full gap-x-2 flex items-center my-2 mx-auto'>
                                                 <Image
+                                                    unoptimized
                                                     alt='avatar'
                                                     src={'/images/usericon.png'}
                                                     width={35}

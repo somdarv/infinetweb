@@ -8,8 +8,8 @@ export default function BlogContent({content}) {
 
     // Function to replace HTML tags with React components
     const modifiedHtml = content
-    .replace(/<h1>(.*?)<\/h1>/g, '<h1 class="w-full font-bold text-gray-600 text-lg">$1</h1>')
-    .replace(/<h2>(.*?)<\/h2>/g, '<h2 class="w-full font-bold text-gray-600 text-lg">$1</h2>')
+    .replace(/<h1>(.*?)<\/h1>/g, '<h1 class="w-full font-bold text-gray-950 text-2xl">$1</h1>')
+    .replace(/<h2>(.*?)<\/h2>/g, '<h2 class="w-full font-bold text-gray-950 text-2xl">$1</h2>')
     .replace(/<h3>(.*?)<\/h3>/g, '<h3 class="w-full font-bold text-gray-600 text-lg">$1</h3>')
     .replace(/<p>(.*?)<\/p>/g, '<p class="text-gray-600 my-8">$1</p>');
 

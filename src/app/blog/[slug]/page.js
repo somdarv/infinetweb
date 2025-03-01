@@ -8,6 +8,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import AuthorSignature from '@/components/AuthorSignature';
 import DynamicBlogData from '@/components/DynamicBlogData'; // Moved Client Logic Here
 import RootLayout from '@/app/layout';
+import Footer from '@/components/Footer'
 
 // ✅ Function to generate static slugs
 export async function generateStaticParams() {
@@ -77,7 +78,7 @@ export default async function Page({ params }) {
                     </Suspense>
                 </div>
 
-                <div className='w-[50%] mx-auto my-auto'>
+                <div className='w-[50%] mx-auto my-4'>
                     <Suspense fallback={<div>Loading signature...</div>}>
                         <AuthorSignature
                             name={postData.post.authorName}
@@ -111,6 +112,7 @@ export default async function Page({ params }) {
                     <ScrollToTop />
                 </div>
             </div>
+            <Footer />
         </RootLayout>
     );
 }

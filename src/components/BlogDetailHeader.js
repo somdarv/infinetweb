@@ -6,7 +6,7 @@ import BlogTag from './BlogTag'
 
 export default function BlogDetailHeader({title, author, date, imageUrl, categories}) {
     return (
-        <div className='w-full container-sectio '>
+        <div className='w-full container-section'>
              {categories && Object.keys(categories).length > 0 && (
                     <BlogTag category={Object.keys(categories)[0]} />
                 )}
@@ -16,6 +16,7 @@ export default function BlogDetailHeader({title, author, date, imageUrl, categor
 
             <div className='w-full gap-x-2 flex items-center my-2 mx-auto'>
                 <Image
+                    unoptimized
                     alt='avatar'
                     src={'/images/usericon.png'}
                     width={35}
@@ -30,6 +31,7 @@ export default function BlogDetailHeader({title, author, date, imageUrl, categor
 
             <div className='my-8 w-full flex rounded-xl h-[300px]'>
                 <Image
+                    unoptimized
                     src={imageUrl}
                     alt={title}
                     width={200}

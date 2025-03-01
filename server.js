@@ -2,7 +2,7 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const next =  require('next')
 
-const port = parseInt(process.env.PORT || '3000', 10)
+const port = parseInt(process.env.PORT || '3016', 10)
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = process.env.NODE_ENV !== "production" ? 'localhost' : 'infinetwallet.com'
 const app = next({ dev })

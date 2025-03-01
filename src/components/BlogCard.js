@@ -21,6 +21,7 @@ export default function BlogCard({
             <div>
                 <div className='rounded-2xl w-full p-2'>
                     <Image
+                        unoptimized
                         src={imageUrl || '/images/blogimg.png'}
                         className='w-full rounded-2xl'
                         layout='responsive'
@@ -32,7 +33,7 @@ export default function BlogCard({
 
                 <div className='w-[80%] my-2 mx-auto'>
                     <p className='font-semibold items-start'>{title}</p>
-                    <p className='text-[10px] my-4'>
+                    <p className='text-[10px] text-gray-600 text-xs my-4'>
                         {excerpt}
                     </p>
                 </div>
@@ -41,6 +42,7 @@ export default function BlogCard({
             {/* footer */}
             <div className='w-[80%] gap-x-2 flex items-end my-2 mx-auto'>
                 <Image
+                    unoptimized
                     alt={`${authorName} avatar`}
                     src={authorImage || '/images/usericon.png'}
                     width={35}
