@@ -10,34 +10,55 @@ import HowItWorks from '@/components/HowItWorks'
 import Footer from '@/components/Footer'
 import Hero2 from '@/components/Hero2'
 
-
+//use this for only 1 hero - currently virtual card
+const heroConfigs = {
+  1: {
+    background: 'bg-primary-dark',
+    text: 'text-white',
+    position: 'left-0',
+    image: '/images/bottomleftlight.png'
+  },
+  2: {
+    background: 'hero2bg',
+    text: 'text-gray-800',
+    position: 'right-0',
+    image: '/images/hero2-image.png'
+  },
+  // 3: {
+  //   background: 'bg-accent',
+  //   text: 'text-white',
+  //   position: 'center',
+  //   image: '/images/hero3-image.png'
+  // }
+};
 
 export default function Page() {
   const [heroType, setHeroType] = useState(2)
   const [isAnimating, setIsAnimating] = useState(false);
 
 
+  //use this one if you wanna activate the hero slide show
 
-  const heroConfigs = {
-    1: {
-      background: 'bg-primary-dark',
-      text: 'text-white',
-      position: 'left-0',
-      image: '/images/bottomleftlight.png'
-    },
-    2: {
-      background: 'hero2bg',
-      text: 'text-gray-800',
-      position: 'right-0',
-      image: '/images/hero2-image.png'
-    },
-    // 3: {
-    //   background: 'bg-accent',
-    //   text: 'text-white',
-    //   position: 'center',
-    //   image: '/images/hero3-image.png'
-    // }
-  };
+  // const heroConfigs = {
+  //   1: {
+  //     background: 'bg-primary-dark',
+  //     text: 'text-white',
+  //     position: 'left-0',
+  //     image: '/images/bottomleftlight.png'
+  //   },
+  //   2: {
+  //     background: 'hero2bg',
+  //     text: 'text-gray-800',
+  //     position: 'right-0',
+  //     image: '/images/hero2-image.png'
+  //   },
+  //   // 3: {
+  //   //   background: 'bg-accent',
+  //   //   text: 'text-white',
+  //   //   position: 'center',
+  //   //   image: '/images/hero3-image.png'
+  //   // }
+  // };
 
 
 
@@ -61,17 +82,17 @@ export default function Page() {
   const renderHero = () => {
     switch (heroType) {
       case 1:
-        return <Hero />;
-      case 2:
         return <Hero2 />;
+      // case 2:
+      //   return <Hero2 />;
       default:
-        return <Hero />;
+        return <Hero2 />;
     }
   };
 
 
   return (
-    <div className={`${currentConfig.background}  ${currentConfig.text} 'bg-primary-dark z-50 overflow-none relative flex flex-col justify-between min-h-screen '`}>
+    <div className={`${heroConfigs[2].background}  ${heroConfigs[2].text} 'bg-primary-dark z-50 overflow-none relative flex flex-col justify-between min-h-screen '`}>
       <div className='bg-black/25 w-full h-full'>
         <span className='absolute z-50 w-[30%] pointer-events-none'>
           <Image
@@ -110,7 +131,7 @@ export default function Page() {
         <Hero2 />
       </div> */}
         <div className='w-[80%] min-h-screen mx-auto'>
-          <AnimatePresence mode='wait'>
+          {/* <AnimatePresence mode='wait'>
             <motion.div
               key={heroType}
               initial={{ opacity: 0, y: 20 }}
@@ -120,7 +141,8 @@ export default function Page() {
             >
               {renderHero()}
             </motion.div>
-          </AnimatePresence>
+          </AnimatePresence> */}
+            <Hero2 />
         </div>
 
 

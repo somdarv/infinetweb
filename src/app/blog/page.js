@@ -50,7 +50,8 @@ export default function Page() {
       }, [handleSlideChange]); // `handleSlideChange` is stable now
 
 
-    const handleGetBlogs = async () => {
+    const handleGetBlogs = useCallback(async () => {
+        setLoading(true);
         try {
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog`, { cache: 'no-store' });
             if (!response.ok) return null;
@@ -62,7 +63,8 @@ export default function Page() {
         } finally {
 
         }
-    }
+        setLoading(false);
+    }, []);
 
     useEffect(() => {
         handleGetBlogs()

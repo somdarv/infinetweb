@@ -17,8 +17,8 @@ export default function Footer({ page }) {
 
     const menuItems = [
         { id: 1, label: 'Home', path: '/' },
-        { id: 2, label: 'About', path: '/about' },
-        { id: 4, label: 'Products', path: '/products' },
+        { id: 2, label: 'About', path: '/' },
+        { id: 4, label: 'Products', path: '/' },
     ]
 
     const [activeItem, setActiveItem] = useState(page);
@@ -35,7 +35,7 @@ export default function Footer({ page }) {
             {/* Top */}
             <div className='w-[90%] bo gap-y-8 py-8 flex container-section md:w-[80%] mx-auto'>
 
-                <div>
+                {/* <div>
                     < h1 className='text-white font-bold text-3xl md:text-[36px] leading-none' >
                         Download The < br /> Freedom App
                     </h1 >
@@ -43,6 +43,7 @@ export default function Footer({ page }) {
                     <div className='w- my-6 flex items-center gap-x-2'>
                         <button>
                             <Image
+                                unoptimized
                                 alt='apple'
                                 src={'/images/apple.svg'}
                                 width={100}
@@ -51,6 +52,7 @@ export default function Footer({ page }) {
                         </button>
                         <button>
                             <Image
+                                unoptimized
                                 alt='android'
                                 src={'/images/android.svg'}
                                 width={100}
@@ -58,7 +60,7 @@ export default function Footer({ page }) {
                             />
                         </button>
                     </div>
-                </div>
+                </div> */}
 
                 <div className='flex w-[60%]  gap-x-4'>
                     <div>
@@ -73,24 +75,27 @@ export default function Footer({ page }) {
                     </div>
 
 
-                    <div className='flex w-full justify-end'>
+                    {/* <div className='flex w-full justify-end container-section-start'>
                         <div className='w-full flex flex-col items-end justify-end'>
                             <h1 className='text-xl my-2 text-end text-[#D66BA0]'>Be Part of What&apos;s Next</h1>
-                            <p className='text-white text-end w-full  md:w-[80%] 2xl:w-[65%] text-sm my-2'>Subscribe to get exclusive insights, early access to new features, and special offers delivered straight to your inbox. Join thousands of forward-thinking professionals already on board.</p>
+                            <p className='text-white text-end w-full sm:w-full md:w-[80%] 2xl:w-[65%] text-sm my-2'>
+                                Subscribe to get exclusive insights, early access to new features, and special offers delivered straight to your inbox. Join thousands of forward-thinking professionals already on board.
+                            </p>
                             <div className='w-[60%] flex justify-end '>
                                 <JoinEmailForm className='my-4 flex justify-end ' />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div >
 
-            <div className='w-[90%]  gap-y-8 py-8 md:w-[80%] mx-auto text-white container-section-start'>
+            <div className='w-[90%] gap-y-8 py-8 md:w-[80%] mx-auto text-white container-section-start'>
                 {/* far left */}
                 <div className=''>
                     <button>
                         <Image
+                            unoptimized
                             src="/images/infinetlogo.svg"
                             alt='infinet logo'
                             width={120}

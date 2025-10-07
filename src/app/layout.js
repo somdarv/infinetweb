@@ -50,18 +50,15 @@ const erstoria = localFont({
     weight: '600',
   },],
   variable: "--font-erstoria",
-
 })
+
 const hogira = localFont({
   src: [{
     path: './fonts/Hogira-Bold.otf',
     weight: '600',
   },],
   variable: "--font-hogira",
-
 })
-
-
 
 export const metadata = {
   title: "Infinet Wallet",
@@ -71,45 +68,47 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, metaImage, metaDescription }) {
-    // Default meta data
-    //const defaultMetaImage = "/images/default-cover.jpg"; // Path to your default image
-    const defaultMetaDescription = "Welcome to Infinet Wallet - Pay Instant, Pay Cool!";
-
+  const defaultMetaDescription = "Welcome to Infinet Wallet - Pay Instant, Pay Cool!";
 
   return (
-      <html lang="en">
-        <head>
-          {/* Dynamic Meta Tags */}
-          <meta property="og:image" content={metaImage} />
-          <meta property="og:description" content={metaDescription || defaultMetaDescription} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={metaImage} />
-          <meta name="twitter:description" content={metaDescription || defaultMetaDescription} />
-           {/* Google Tag Manager */}
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=G-K2FNJLME4Y`}
-            />
-            <Script
-              id="google-analytics"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-K2FNJLME4Y', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
-            />
-        </head>
-        <body
-          className={`${aloevera.variable} antialiased`}
-        >
-            {children}
-        </body>
-      </html>
+    <html lang="en">
+      <head>
+        {/* Dynamic Meta Tags */}
+        <meta property="og:image" content={metaImage} />
+        <meta property="og:description" content={metaDescription || defaultMetaDescription} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={metaImage} />
+        <meta name="twitter:description" content={metaDescription || defaultMetaDescription} />
+        
+        {/* Paystack Script - FIXED: Use Next.js Script component with afterInteractive */}
+        <Script
+          src="https://js.paystack.co/v1/inline.js"
+          strategy="afterInteractive"
+        />
+        
+        {/* Google Tag Manager */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-K2FNJLME4Y`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-K2FNJLME4Y', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
+      <body className={`${aloevera.variable} antialiased`}>
+        {children}
+      </body>
+    </html>
   );
 }
